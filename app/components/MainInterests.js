@@ -15,28 +15,29 @@ export class MainInterests extends React.Component {
   render() {
     const { interests } = this.props;
     return (
-      <div className="mainPage">
+      <div>
         <div className="header">
           <div className="allHeader">
             <h1>MY INTERESTS:</h1>
           </div>
         </div>
-        <CardGroup>
-          {interests.map(interest => {
-            return (
-              <Card
-                border="primary"
-                key={interest.id}
-                style={{ width: '45vw', height: '30vw' }}
-              >
-                <Card.Body>
-                  <Card.Title>{interest.name}</Card.Title>
-                  <Card.Text>{interest.description}</Card.Text>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </CardGroup>
+        <div>
+          <CardGroup>
+            {interests.map(interest => {
+              return (
+                <Card
+                  key={interest.id}
+                  style={{ minWidth: '22%', maxWidth: '22%', height: '20vw' }}
+                >
+                  <Card.Body>
+                    <Card.Title>{interest.name}</Card.Title>
+                    <Card.Text>{interest.description}</Card.Text>
+                  </Card.Body>
+                </Card>
+              );
+            })}
+          </CardGroup>
+        </div>
       </div>
     );
   }

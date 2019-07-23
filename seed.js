@@ -9,22 +9,23 @@ const seed = async () => {
       Interest.create({
         name: 'Artwork',
         imageUrl: 'mrkrabs.jpg',
-        description: 'something something something something something',
+        description:
+          'Combining photography, with found-objects and historical art pieces ',
       }),
       Interest.create({
         name: 'Creative Writing',
         imageUrl: 'mrkrabs.jpg',
-        description: 'something something something something something',
+        description: 'Magical flash fiction and modern poetry ',
       }),
       Interest.create({
         name: 'Literary Theory',
         imageUrl: 'mrkrabs.jpg',
-        description: 'something something something something something',
+        description: 'Exploring the theory and limits of literature ',
       }),
       Interest.create({
         name: 'Neuroscience Research',
         imageUrl: 'mrkrabs.jpg',
-        description: 'something something something something something',
+        description: 'Studying mechanisms underlying learning and memory',
       }),
     ]);
 
@@ -71,22 +72,22 @@ const seed = async () => {
         description: 'something something something something something',
         interestId: 1,
       }),
-      Project.create({
-        name: 'Zebrafish - Behavioral Neuroscience',
-        date: 'November, 2015',
-        imageUrl: 'zfish.jpeg',
-        description:
-          'A study of behavioral changes in Danio rerio (zebrafish) after the introduction of a noxious chemical stimulus',
-        interestId: 4,
-      }),
-      Project.create({
-        name: 'Aplysia californica - Molecular Neuroscience',
-        date: 'August, 2015',
-        imageUrl: 'aplysia.jpeg',
-        description:
-          'A study of molecular changes in Aplysia californica (a marine snail) after the induction of long-term memory',
-        interestId: 4,
-      }),
+      // Project.create({
+      //   name: 'Zebrafish - Behavioral Neuroscience',
+      //   date: 'November, 2015',
+      //   imageUrl: 'zfish.jpeg',
+      //   description:
+      //     'A study of behavioral changes in Danio rerio (zebrafish) after the introduction of a noxious chemical stimulus',
+      //   interestId: 4,
+      // }),
+      // Project.create({
+      //   name: 'Aplysia californica - Molecular Neuroscience',
+      //   date: 'August, 2015',
+      //   imageUrl: 'aplysia.jpeg',
+      //   description:
+      //     'A study of molecular changes in Aplysia californica (a marine snail) after the induction of long-term memory',
+      //   interestId: 4,
+      // }),
     ]);
     return [
       artwork,
