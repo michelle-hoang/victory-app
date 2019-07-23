@@ -5,29 +5,184 @@
 
 * {
   box-sizing: border-box;
-  font-family: arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
-  background: linear-gradient(#ffffff, #c0c0c0);
-  height: 100vh;
+  background: white;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
   width: 100vw;
 }
 
-nav {
+/* nav {
   align-items: center;
   background-color: #333333;
   color: #c0c0c0;
   display: flex;
   height: 80px;
+  width: 100%;
   padding: 10px;
-}
+} */
 
 main {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vw;
+  width: 100vw;
+}
+
+main h1 {
+  font-family: 'Shrikhand', cursive;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  display: flex;
+  font-weight: bold;
+  font-size: 6vw;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+main h2 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #ed6a5a; */
+  /* background-color: #3c70c0; */
+  background: linear-gradient(0.25turn, #ed6a5a, #ed9c5a, #e8cc68, #647f3f);
+  display: flex;
+  height: 3vw;
+  width: 100vw;
+  padding: 1vw;
+  font-size: 1.25vw;
+  color: white;
+}
+
+.nav1 {
+  display: flex;
+  width: 33%;
+  padding-left: 2vw;
+}
+
+.nav2 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 66%;
+}
+
+nav a:link,
+nav a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+.allHeader {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 3vw;
+  font-size: 1.75vw;
+}
+
+.allHeader h1 {
+  font-family: 'Shrikhand', cursive;
+  color: #ed6a5a;
+  font-size: 3vw;
+  text-align: center;
+}
+
+/* form */
+
+.formBody {
+  display: flex;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1vw;
+  height: 35vw;
+  width: 60vw;
+  font-size: 1.25vw;
+}
+
+label {
+  margin: 1vw;
+}
+
+input {
+  margin: 1vw;
+  width: 20vw;
+}
+
+.input {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.desc {
+  height: 15vw;
+}
+
+.submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 2vw;
+}
+
+.mainPage div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-group {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-group .card {
+  margin: 1vw;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+/* 
+@include media-breakpoint-up(sm) {
+  > .card {
+    flex: none;
+  }
+} */
+
+.carousel {
+  margin: 2vw;
+  width: 50vw;
+}
+
+.carouselContainer {
+  display: flex;
   justify-content: center;
 }
