@@ -164,8 +164,13 @@ input {
 
 .card-group .card {
   margin: 1vw;
+  border: 1px solid black;
 }
 
+.card-group .card + .card {
+  /* margin-left: 1vw; */
+  border-left: 1px solid black;
+}
 .card-img-top {
   width: 100%;
 }
