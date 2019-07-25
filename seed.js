@@ -1,108 +1,109 @@
 const { green, red } = require('chalk');
-const { db, Project, Interest } = require('./server/db');
+const { db, Resource, Method } = require('./server/db');
 
 const seed = async () => {
   try {
     await db.sync({ force: true });
-
-    const [artwork, fiction, poetry, research] = await Promise.all([
-      Interest.create({
-        name: 'Artwork',
+    const [water, electricity, gas, plastics, paper] = await Promise.all([
+      Resource.create({
+        name: 'Water',
         imageUrl: 'mrkrabs.jpg',
         description:
-          'Combining photography, with found-objects and historical art pieces ',
+          'Showering, bathing, brushing your teeth, tending to a garden, watering your lawn, washing your car, filling your pool',
       }),
-      Interest.create({
-        name: 'Creative Writing',
+      Resource.create({
+        name: 'Electricity',
         imageUrl: 'mrkrabs.jpg',
-        description: 'Magical flash fiction and modern poetry ',
+        description:
+          'plugging in appliances, running the washer/dryer, using energy-ineffienct lightbulbs, keeping lights on',
       }),
-      Interest.create({
-        name: 'Literary Theory',
+      Resource.create({
+        name: 'Gas',
         imageUrl: 'mrkrabs.jpg',
-        description: 'Exploring the theory and limits of literature ',
+        description:
+          'taking showers with hot water, running washing machine with hot water, using an oven, using central heating, poor insulation',
       }),
-      Interest.create({
-        name: 'Neuroscience Research',
+      Resource.create({
+        name: 'Plastics',
         imageUrl: 'mrkrabs.jpg',
-        description: 'Studying mechanisms underlying learning and memory',
+        description:
+          'Single-use water bottles, extra product packaging, grocery store plastic bags, disposable utensils',
+      }),
+      Resource.create({
+        name: 'Paper',
+        imageUrl: 'mrkrabs.jpg',
+        description:
+          'Paper bills, junk mailers, single-use paper towels or paper napkins, paper plates and cups',
+      }),
+      Resource.create({
+        name: 'Food',
+        imageUrl: 'mrkrabs.jpg',
+        description:
+          'Meat, poultry, dairy, grains, vegetables, fruits, pre-packaged or processed foods, fast food',
       }),
     ]);
-
-    const [job, sight, cloud, drink, lovers, wtf, brain] = await Promise.all([
-      Project.create({
-        name: 'The Hunt',
-        date: 'January, 2017',
+    const [
+      lightBulb,
+      waterBottle,
+      groceryBag,
+      toilet,
+      thermostat,
+      windows,
+    ] = await Promise.all([
+      Method.create({
+        name: 'Energy-Efficient LED Bulbs ',
         imageUrl: 'job.jpg',
-        description: 'something something something something something',
-        interestId: 1,
+        description: 'Switching to energy-efficient light bulbs',
+        resourceId: 5,
       }),
-      Project.create({
-        name: 'Limited Sight Distance',
-        date: 'January, 2017',
-        imageUrl: 'sight.jpg',
-        description: 'something something something something something',
-        interestId: 1,
+      Method.create({
+        name: 'Reusable Water Bottles',
+        imageUrl: 'job.jpg',
+        description:
+          'Reusing a glass or plastic water bottle in lieu of buying single use water bottles',
+        resourceId: 2,
       }),
-      Project.create({
-        name: 'Rain',
-        date: 'January, 2017',
-        imageUrl: 'cloud.jpg',
-        description: 'something something something something something',
-        interestId: 1,
+      Method.create({
+        name: 'Canvas Grocery Bags',
+        imageUrl: 'job.jpg',
+        description:
+          'Bring your own grocery bags instead of buying plastic bags at the store',
+        resourceId: 2,
       }),
-      Project.create({
-        name: 'Reclaimed Water',
-        date: 'February, 2017',
-        imageUrl: 'drink.jpg',
-        description: 'something something something something something',
-        interestId: 1,
+      Method.create({
+        name: 'DIY Low-flow Toilet',
+        imageUrl: 'job.jpg',
+        description:
+          'Place a brick inside your toilet tank to displace water and decrease flush volume',
+        resourceId: 1,
       }),
-      Project.create({
-        name: 'Lovers on the Moon',
-        date: 'December, 2016',
-        imageUrl: 'lovers.jpg',
-        description: 'something something something something something',
-        interestId: 1,
+      Method.create({
+        name: 'Thermostat Regulation',
+        imageUrl: 'job.jpg',
+        description: 'Decrease your thermostat by one degree',
+        resourceId: 4,
       }),
-      Project.create({
-        name: 'Conversations with Fred',
-        date: 'December, 2016',
-        imageUrl: 'wtf.jpg',
-        description: 'something something something something something',
-        interestId: 1,
+      Method.create({
+        name: 'Window Insulation',
+        imageUrl: 'job.jpg',
+        description:
+          'Decrease your energy bill by weather-proofing windows and sealing gaps to prevent unintended heat loss',
+        resourceId: 4,
       }),
-      // Project.create({
-      //   name: 'Zebrafish - Behavioral Neuroscience',
-      //   date: 'November, 2015',
-      //   imageUrl: 'zfish.jpeg',
-      //   description:
-      //     'A study of behavioral changes in Danio rerio (zebrafish) after the introduction of a noxious chemical stimulus',
-      //   interestId: 4,
-      // }),
-      // Project.create({
-      //   name: 'Aplysia californica - Molecular Neuroscience',
-      //   date: 'August, 2015',
-      //   imageUrl: 'aplysia.jpeg',
-      //   description:
-      //     'A study of molecular changes in Aplysia californica (a marine snail) after the induction of long-term memory',
-      //   interestId: 4,
-      // }),
     ]);
     return [
-      artwork,
-      fiction,
-      poetry,
-      research,
-      job,
-      sight,
-      cloud,
-      drink,
-      lovers,
-      wtf,
-      brain,
+      water,
+      electricity,
+      gas,
+      plastics,
+      paper,
+      lightBulb,
+      waterBottle,
+      groceryBag,
+      toilet,
+      thermostat,
+      windows,
     ];
-    // seed your database here!
   } catch (err) {
     console.log(red(err));
   }

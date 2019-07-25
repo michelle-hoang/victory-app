@@ -2,20 +2,20 @@
 // with your models, for which you'll find some blank files in this directory:
 
 const db = require('./database');
-const Project = require('./project');
-const Interest = require('./interest');
+const Method = require('./method');
+const Resource = require('./resource');
 
 // This is a great place to establish associations between your models
 // (https://sequelize-guides.netlify.com/association-types/).
 // Example:
 //
 // Puppy.belongsTo(Owner)
-Project.belongsTo(Interest);
-Interest.hasMany(Project, { as: 'Project' });
+Method.belongsTo(Resource);
+Resource.hasMany(Method, { as: 'Method' });
 
 module.exports = {
   // Include your models in this exports object as well!
   db,
-  Project,
-  Interest,
+  Method,
+  Resource,
 };

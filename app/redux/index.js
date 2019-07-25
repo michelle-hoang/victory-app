@@ -1,12 +1,17 @@
 import { combineReducers } from 'redux';
-import { projectReducer } from './projects';
-import { interestReducer } from './interests';
+import { resourceReducer } from './resources';
+import { practiceReducer } from './practices';
+import { singleResourceReducer } from './singleResource';
+import { singlePracticeReducer } from './singlePractice';
+
 // This reducer is just a stub. We should probably do something
 // with that combineReducers thing up there...
 
 const appReducer = combineReducers({
-  projects: projectReducer,
-  interests: interestReducer,
+  resources: resourceReducer,
+  practices: practiceReducer,
+  singleResource: singleResourceReducer,
+  singlePractice: singlePracticeReducer,
 });
 
 export default appReducer;

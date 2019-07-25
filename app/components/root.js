@@ -3,17 +3,16 @@ import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Homepage from './Homepage';
-import MainInterests from './MainInterests';
-import MainProjects from './MainProjects';
-import Resume from './Resume';
-import ContactForm from './ContactForm';
-import AboutMe from './AboutMe';
+import AllResources from './AllResources';
+import AllPractices from './AllPractices';
+import AddPracticeForm from './AddPracticeForm';
+import About from './About';
 
-import { fetchProjects } from '../redux/projects';
+import { fetchResources } from '../redux/resources';
 
 class Root extends React.Component {
   componentDidMount() {
-    this.props.fetchProjects();
+    this.props.fetchResources();
   }
   render() {
     return (
@@ -24,17 +23,14 @@ class Root extends React.Component {
               <div className="nav1">Home</div>
             </Link>
             <div className="nav2">
-              <Link to="/interests" className="navbar">
-                <div>My Interests</div>
+              <Link to="/resources" className="navbar">
+                <div>Environmental Resources</div>
               </Link>
-              <Link to="/projects" className="navbar">
-                <div>Selected Work</div>
+              <Link to="/practices" className="navbar">
+                <div>Sustainable Practices</div>
               </Link>
-              <Link to="/resume" className="navbar">
-                <div>My Resume</div>
-              </Link>
-              <Link to="/aboutme" className="navbar">
-                <div>About Me</div>
+              <Link to="/about" className="navbar">
+                <div>About Sustainability</div>
               </Link>
               {/* <Link to="/contactme" className="navbar">
                 <div>Contact Me</div>
@@ -43,11 +39,11 @@ class Root extends React.Component {
           </nav>
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route exact path="/interests" component={MainInterests} />
-            <Route exact path="/projects" component={MainProjects} />
-            <Route exact path="/resume" component={Resume} />
-            <Route exact path="/aboutme" component={AboutMe} />
-            <Route exact path="/contactme" component={ContactForm} />
+            <Route exact path="/resources" component={AllResources} />
+            <Route exact path="/about" component={About} />
+            {/* <Route exact path="/practices" component={AllPractices} />
+            <Route exact path="/addpractice" component={AddPracticeForm} />
+            */}
           </Switch>
         </div>
       </Router>
@@ -56,11 +52,12 @@ class Root extends React.Component {
 }
 
 const mapState = state => ({
-  projects: state.projects,
+  resources: state.resources,
+  practices: state.resources,
 });
 
 const mapDispatch = dispatch => ({
-  fetchProjects: () => dispatch(fetchProjects()),
+  fetchResources: () => dispatch(fetchResources()),
 });
 
 export default connect(

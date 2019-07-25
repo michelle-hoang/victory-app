@@ -37,8 +37,8 @@ main {
 }
 
 main h1 {
-  font-family: 'Shrikhand', cursive;
-  /* font-family: 'Josefin Sans', sans-serif; */
+  /* font-family: 'Shrikhand', cursive; */
+  font-family: 'Josefin Sans', sans-serif;
   display: flex;
   font-weight: bold;
   font-size: 6vw;
@@ -56,9 +56,14 @@ main h2 {
 nav {
   justify-content: space-between;
   align-items: center;
-  /* background-color: #ed6a5a; */
-  /* background-color: #3c70c0; */
-  background: linear-gradient(0.25turn, #ed6a5a, #ed9c5a, #e8cc68, #647f3f);
+  background: linear-gradient(
+    0.25turn,
+    #eac231,
+    #e8cc68,
+    #929e3c,
+    #647f3f,
+    #233f14
+  );
   display: flex;
   height: 3vw;
   width: 100vw;
@@ -100,9 +105,9 @@ nav a:visited {
 }
 
 .allHeader h1 {
-  font-family: 'Shrikhand', cursive;
-  color: #ed6a5a;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 3vw;
+  color: #47631f;
   text-align: center;
 }
 
@@ -155,15 +160,23 @@ input {
   flex-direction: column;
 }
 
+.cardHouse {
+  display: flex;
+  align-content: center;
+  width: 80vw;
+}
+
 .card-group {
   display: flex;
   align-content: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  width: 80%;
 }
 
 .card-group .card {
-  margin: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
   border: 1px solid black;
 }
 
