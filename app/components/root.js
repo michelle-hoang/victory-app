@@ -7,6 +7,7 @@ import AllResources from './AllResources';
 import AllPractices from './AllPractices';
 import AddPracticeForm from './AddPracticeForm';
 import About from './About';
+import Why from './Why';
 
 import { fetchResources } from '../redux/resources';
 
@@ -17,33 +18,38 @@ class Root extends React.Component {
   render() {
     return (
       <Router>
-        <div className="outmost">
+        <div>
           <nav>
+            {/* <div className="nav1"> */}
             <Link to="/" className="navbar">
-              <div className="nav1">Home</div>
+              <div>Home</div>
             </Link>
-            <div className="nav2">
-              <Link to="/resources" className="navbar">
-                <div>Environmental Resources</div>
-              </Link>
-              <Link to="/practices" className="navbar">
-                <div>Sustainable Practices</div>
-              </Link>
-              <Link to="/about" className="navbar">
-                <div>About Sustainability</div>
-              </Link>
-              {/* <Link to="/contactme" className="navbar">
+            <Link to="/about" className="navbar">
+              <div>About Sustainability</div>
+            </Link>
+            {/* </div> */}
+            {/* <div className="nav2"> */}
+            <Link to="/resources" className="navbar">
+              <div>Environmental Resources</div>
+            </Link>
+            <Link to="/practices" className="navbar">
+              <div>Sustainable Practices</div>
+            </Link>
+            <Link to="/motivation" className="navbar">
+              <div>Why Go Green?</div>
+            </Link>
+            {/* <Link to="/contactme" className="navbar">
                 <div>Contact Me</div>
               </Link> */}
-            </div>
+            {/* </div> */}
           </nav>
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route exact path="/resources" component={AllResources} />
             <Route exact path="/about" component={About} />
-            {/* <Route exact path="/practices" component={AllPractices} />
-            <Route exact path="/addpractice" component={AddPracticeForm} />
-            */}
+            <Route exact path="/resources" component={AllResources} />
+            <Route exact path="/motivation" component={Why} />
+            <Route exact path="/practices" component={AllPractices} />
+            {/* <Route exact path="/addpractice" component={AddPracticeForm} /> */}
           </Switch>
         </div>
       </Router>

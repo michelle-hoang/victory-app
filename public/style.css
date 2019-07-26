@@ -17,27 +17,16 @@ body {
   width: 100vw;
 }
 
-/* nav {
-  align-items: center;
-  background-color: #333333;
-  color: #c0c0c0;
-  display: flex;
-  height: 80px;
-  width: 100%;
-  padding: 10px;
-} */
-
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vw;
+  padding: 7vw;
   width: 100vw;
 }
 
 main h1 {
-  /* font-family: 'Shrikhand', cursive; */
   font-family: 'Josefin Sans', sans-serif;
   display: flex;
   font-weight: bold;
@@ -47,10 +36,6 @@ main h1 {
   margin-bottom: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-}
-
-main h2 {
-  font-family: 'Josefin Sans', sans-serif;
 }
 
 nav {
@@ -72,18 +57,6 @@ nav {
   color: white;
 }
 
-.nav1 {
-  display: flex;
-  width: 33%;
-  padding-left: 2vw;
-}
-
-.nav2 {
-  display: flex;
-  justify-content: space-evenly;
-  width: 66%;
-}
-
 nav a:link,
 nav a:visited {
   text-decoration: none;
@@ -100,7 +73,8 @@ nav a:visited {
   display: flex;
   justify-content: center;
   width: 100vw;
-  padding: 3vw;
+  padding: 2.5vw;
+  padding-bottom: 1vw;
   font-size: 1.75vw;
 }
 
@@ -163,7 +137,6 @@ input {
 .cardHouse {
   display: flex;
   align-content: center;
-  width: 80vw;
 }
 
 .card-group {
@@ -171,20 +144,18 @@ input {
   align-content: center;
   align-items: center;
   justify-content: space-evenly;
-  width: 80%;
 }
 
 .card-group .card {
   margin-top: 1vw;
   margin-bottom: 1vw;
-  border: 1px solid black;
 }
 
 .card-group .card + .card {
-  /* margin-left: 1vw; */
-  border-left: 1px solid black;
+  margin-left: 1vw;
 }
-.card-img-top {
+
+.card-img-left img {
   width: 100%;
 }
 
@@ -203,4 +174,57 @@ input {
 .carouselContainer {
   display: flex;
   justify-content: center;
+}
+
+.resourceImg {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-top: 1vw;
+}
+
+.resourceInfo {
+  width: 50%;
+  padding: 1vw;
+  padding-left: 1.25vw;
+}
+
+.resourceCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.practiceCard {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.practiceInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1vw;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.addBar {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.clickable {
+  text-align: center;
+  font-size: 1vw;
 }

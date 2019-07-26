@@ -24,14 +24,36 @@ export class AllResources extends React.Component {
         <div className="cardHouse">
           <CardGroup>
             {resources.map(resource => {
+              const url = resource.imageUrl;
               return (
                 <Card
                   key={resource.id}
-                  style={{ minWidth: '40%', maxWidth: '40%', height: '20vw' }}
+                  style={{
+                    minWidth: '30vw',
+                    maxWidth: '30vw',
+                    height: '18vw',
+                    borderRadius: '15px',
+                    border: '1px solid black',
+                  }}
                 >
                   <Card.Body>
-                    <Card.Title>{resource.name}</Card.Title>
-                    <Card.Text>{resource.description}</Card.Text>
+                    <div className="resourceCard">
+                      <div className="resourceImg">
+                        <Card.Img
+                          style={{ width: '100%' }}
+                          variant="left"
+                          src={url}
+                        />
+                      </div>
+                      <div className="resourceInfo">
+                        <Card.Title style={{ fontSize: '2vw' }}>
+                          {resource.name}
+                        </Card.Title>
+                        <Card.Text style={{ fontSize: '1vw' }}>
+                          {resource.description}
+                        </Card.Text>
+                      </div>
+                    </div>
                   </Card.Body>
                 </Card>
               );

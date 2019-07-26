@@ -2,7 +2,7 @@
 // with your models, for which you'll find some blank files in this directory:
 
 const db = require('./database');
-const Method = require('./method');
+const Practice = require('./practice');
 const Resource = require('./resource');
 
 // This is a great place to establish associations between your models
@@ -10,12 +10,12 @@ const Resource = require('./resource');
 // Example:
 //
 // Puppy.belongsTo(Owner)
-Method.belongsTo(Resource);
-Resource.hasMany(Method, { as: 'Method' });
+Practice.belongsTo(Resource);
+Resource.hasMany(Practice, { as: 'Practice' });
 
 module.exports = {
   // Include your models in this exports object as well!
   db,
-  Method,
+  Practice,
   Resource,
 };

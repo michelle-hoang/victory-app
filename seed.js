@@ -1,5 +1,5 @@
 const { green, red } = require('chalk');
-const { db, Resource, Method } = require('./server/db');
+const { db, Resource, Practice } = require('./server/db');
 
 const seed = async () => {
   try {
@@ -7,37 +7,37 @@ const seed = async () => {
     const [water, electricity, gas, plastics, paper] = await Promise.all([
       Resource.create({
         name: 'Water',
-        imageUrl: 'mrkrabs.jpg',
+        imageUrl: 'droplet.png',
         description:
           'Showering, bathing, brushing your teeth, tending to a garden, watering your lawn, washing your car, filling your pool',
       }),
       Resource.create({
         name: 'Electricity',
-        imageUrl: 'mrkrabs.jpg',
+        imageUrl: 'plug.png',
         description:
-          'plugging in appliances, running the washer/dryer, using energy-ineffienct lightbulbs, keeping lights on',
+          'Plugging in appliances, running the washer/dryer, using energy-inefficienct lightbulbs, keeping lights on',
       }),
       Resource.create({
         name: 'Gas',
-        imageUrl: 'mrkrabs.jpg',
+        imageUrl: 'fire.png',
         description:
-          'taking showers with hot water, running washing machine with hot water, using an oven, using central heating, poor insulation',
+          'Taking showers with hot water, running washing machine with hot water, using an oven, using central heating, poor insulation',
       }),
       Resource.create({
         name: 'Plastics',
-        imageUrl: 'mrkrabs.jpg',
+        imageUrl: 'bottle.png',
         description:
           'Single-use water bottles, extra product packaging, grocery store plastic bags, disposable utensils',
       }),
       Resource.create({
         name: 'Paper',
-        imageUrl: 'mrkrabs.jpg',
+        imageUrl: 'notepad.png',
         description:
           'Paper bills, junk mailers, single-use paper towels or paper napkins, paper plates and cups',
       }),
       Resource.create({
         name: 'Food',
-        imageUrl: 'mrkrabs.jpg',
+        imageUrl: 'takeout.png',
         description:
           'Meat, poultry, dairy, grains, vegetables, fruits, pre-packaged or processed foods, fast food',
       }),
@@ -50,44 +50,44 @@ const seed = async () => {
       thermostat,
       windows,
     ] = await Promise.all([
-      Method.create({
+      Practice.create({
         name: 'Energy-Efficient LED Bulbs ',
-        imageUrl: 'job.jpg',
-        description: 'Switching to energy-efficient light bulbs',
+        imageUrl: 'lightbulb.png',
+        description: 'Switch to energy-efficient light bulbs',
         resourceId: 5,
       }),
-      Method.create({
+      Practice.create({
         name: 'Reusable Water Bottles',
-        imageUrl: 'job.jpg',
+        imageUrl: 'nalgene.png',
         description:
-          'Reusing a glass or plastic water bottle in lieu of buying single use water bottles',
+          'Reuse a glass or plastic water bottle instead of buying single-use water bottles',
         resourceId: 2,
       }),
-      Method.create({
+      Practice.create({
         name: 'Canvas Grocery Bags',
-        imageUrl: 'job.jpg',
+        imageUrl: 'shoppingcart.png',
         description:
           'Bring your own grocery bags instead of buying plastic bags at the store',
         resourceId: 2,
       }),
-      Method.create({
+      Practice.create({
         name: 'DIY Low-flow Toilet',
-        imageUrl: 'job.jpg',
+        imageUrl: 'brick.png',
         description:
           'Place a brick inside your toilet tank to displace water and decrease flush volume',
         resourceId: 1,
       }),
-      Method.create({
+      Practice.create({
         name: 'Thermostat Regulation',
-        imageUrl: 'job.jpg',
+        imageUrl: 'temp.png',
         description: 'Decrease your thermostat by one degree',
         resourceId: 4,
       }),
-      Method.create({
+      Practice.create({
         name: 'Window Insulation',
-        imageUrl: 'job.jpg',
+        imageUrl: 'house.png',
         description:
-          'Decrease your energy bill by weather-proofing windows and sealing gaps to prevent unintended heat loss',
+          'Weather-proof windows and seal gaps to prevent unintended heat loss',
         resourceId: 4,
       }),
     ]);

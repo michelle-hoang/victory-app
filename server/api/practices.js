@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Method } = require('../db/index');
+const { Practice } = require('../db/index');
 
 router.get('/', async (req, res, next) => {
   try {
-    const methods = await Method.findAll();
-    res.status(200).send(methods);
+    const practices = await Practice.findAll();
+    res.status(200).send(practices);
   } catch (error) {
     next(error);
   }
@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     const { name, imageUrl, description } = req.body;
-    const project = await Method.create({ name, imageUrl, description });
+    const project = await Practice.create({ name, imageUrl, description });
     res.json(project);
   } catch (error) {
     console.log(error);
@@ -23,8 +23,8 @@ router.post('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     const id = Number(req.params.id);
-    const method = await Method.findByPk(id);
-    res.json(method);
+    const practice = await Practice.findByPk(id);
+    res.json(practice);
   } catch (error) {
     next(error);
   }
@@ -33,13 +33,13 @@ router.get('/:id', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const id = Number(req.params.id);
-    const method = await Method.findByPk(id);
-    if (!method) {
+    const practice = await Practice.findByPk(id);
+    if (!practice) {
       return res.sendStatus(404);
     }
     const { description } = req.body;
-    const updatedMethod = await method.update({ description });
-    res.json(updatedMethod);
+    const updatedPractice = await practice.update({ description });
+    res.json(updatedPractice);
   } catch (error) {
     next(error);
   }
@@ -48,7 +48,7 @@ router.put('/:id', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
   try {
     const id = Number(req.params.id);
-    await Method.destroy({ where: { id } });
+    await Practice.destroy({ where: { id } });
     res.sendStatus(204);
   } catch (error) {
     next(error);

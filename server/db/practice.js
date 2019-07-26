@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
 
-const Method = db.define('method', {
+const Practice = db.define('practice', {
   name: {
     type: Sequelize.TEXT,
     allowNull: false,
@@ -17,4 +17,4 @@ const Method = db.define('method', {
   },
 });
 
-module.exports = Method;
+module.exports = Practice;
