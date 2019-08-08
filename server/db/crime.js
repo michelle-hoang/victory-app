@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
 
-const Resource = db.define('resource', {
+const Crime = db.define('crime', {
   name: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -9,12 +9,12 @@ const Resource = db.define('resource', {
       notEmpty: true,
     },
   },
-  imageUrl: {
-    type: Sequelize.STRING,
-  },
   description: {
     type: Sequelize.TEXT,
   },
+  frequency: {
+    type: Sequelize.STRING,
+  },
 });
 
-module.exports = Resource;
+module.exports = Crime;

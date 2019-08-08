@@ -2,18 +2,31 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="mainPage">
+    <div>
       <div className="header">
-        <div className="allHeader">
-          <h1>What does it mean to live sustainably?</h1>
-        </div>
-        <div className="container" />
+        <h1>Background Information</h1>
+      </div>
+      <div>
+        <p>
+          All data used in this project is publically accessible through the
+          City of Chicago Data Portal.
+        </p>
+        <p>
+          The main dataset contains all reported crimes in the city of Chicago,
+          from the years 2001 through 2019, excluding the most recent 7 days
+          from time of access.
+        </p>
+        <p>
+          Looking at crimes recorded in 2018, I focused four subsets of crime:
+          <ul>
+            <li>Homicide</li>
+            <li>Narcotics</li>
+            <li>Weapons Violations</li>
+            <li>Interference with a Public Office</li>
+          </ul>
+        </p>
       </div>
     </div>
   );
 };
-
-// Currently, we're just exporting the component as-is. When we're ready to
-// hook it up to the redux store, we'll export the connected component by default:
-// export default connect(mapState, mapDispatch)(AllStudents)
 export default About;

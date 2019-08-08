@@ -1,57 +1,45 @@
-# Michelle Hoang - Personal Website
+# Views from the 606
 
-### Resume
+# Stackathon
 
-- Interactive resume with pop-ups
+# Prevalence of different types of crime by location (Heat Map)
 
-### Skills
+# General types of crime (Bar Graph)
 
-- Short fiction
-  - Sepia-toned daydreams
-  - My cat's 1000 lives
-  - Sliced oranges
-- Poetry
-  - The Corner of Wells/Franklin
-  - Homeless
-- Multimedia Collage Work
-  - Marat
-  - Fish in the night sky
-  - Lovers
-- Neuroscience Research
-  - Zebrafish/Aplysia research
-  - NIH + ABRCMS posters
-  - Thesis work
-- Front-end development
+# Type of crime vs. location (Correlation)
 
-### Projects
+# Likelihood of domestic dispute per type of crime (Correlation)
 
-- Sepia-toned daydreams
-- My cat's 1000 lives
-- Sliced oranges
+# Likelihood of arrest for crime type
 
-- The Corner of Wells/Franklin
-- Homeless
+# Likelihood of arrest for crime type depending on location
 
-- Marat
-- Fish in the night sky
-- Lovers
+# Average crime rates over the course of a day
 
-- Zebrafish/Aplysia research
-- NIH + ABRCMS posters
-- Thesis work
-
-###### Views
-
-1. Homepage
-2. All Skills // can add/delete a skill
-3. All Projects // can add/delete a project
-4. Single Project
-
-- Single Artwork
-- Single Writing
-- Single Researh Summary
-
-5. Resume
-6. Contact me
-7. Add project form
-8. Update project form
+#Types of Crime: (in order of prevalence)
+Theft
+Battery
+Criminal Damage
+Narcotics
+Assault
+Other Offense (?)
+Burglary
+Motor Vehical Theft
+Deceptive Practice
+Robbery
+Criminal Trespass
+Weapons Violation
+Prostition
+Public Peace Violation
+Offense Involving Children
+Criminal Sexual Assault
+Sex Offense
+Interference with a Public Officer
+Gambling
+Liquor Law Violation
+Arson
+Homicide
+Kidnapping
+Intimidation
+Stalking
+Obscenity
