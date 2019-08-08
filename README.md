@@ -1,22 +1,20 @@
-######Views from the 606
+###Stackathon
 
-# Stackathon
+###Prevalence of different types of crime by location (Heat Map)
 
-# Prevalence of different types of crime by location (Heat Map)
+###General types of crime (Bar Graph)
 
-# General types of crime (Bar Graph)
+###Type of crime vs. location (Correlation)
 
-# Type of crime vs. location (Correlation)
+###Likelihood of domestic dispute per type of crime (Correlation)
 
-# Likelihood of domestic dispute per type of crime (Correlation)
+###Likelihood of arrest for crime type
 
-# Likelihood of arrest for crime type
+###Likelihood of arrest for crime type depending on location
 
-# Likelihood of arrest for crime type depending on location
+###Average crime rates over the course of a day
 
-# Average crime rates over the course of a day
-
-#Types of Crime: (in order of prevalence)
+###Types of Crime: (in order of prevalence)
 Theft
 Battery
 Criminal Damage
