@@ -5,16 +5,16 @@ export default class ExpLoader extends React.Component {
   constructor() {
     super();
     this.state = {
-      percent: 25,
+      percent: 10,
       data: this.getData(0),
     };
   }
 
   componentDidMount() {
-    let percent = 25;
+    let percent = 10;
     this.setStateInterval = window.setInterval(() => {
-      percent += Math.random() * 25;
-      percent = percent > 100 ? 0 : percent;
+      percent += Math.random() * 10;
+      percent = percent > 40 ? (percent -= Math.random() * 25) : percent;
       this.setState({
         percent,
         data: this.getData(percent),
