@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
-import { crimeReducer } from './crimes';
-
-// This reducer is just a stub. We should probably do something
-// with that combineReducers thing up there...
+import dataReducer from './data';
 
 const appReducer = combineReducers({
-  crime: crimeReducer,
+  data: dataReducer,
 });
 
 export default appReducer;

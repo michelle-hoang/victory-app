@@ -7,7 +7,7 @@ export const About = () => {
         <h1>Background Information</h1>
       </div>
       <div className="info">
-        <div style={{ width: '36rem' }}>
+        <div style={{ width: '35rem' }}>
           <div>
             <p>
               At the start of Stackathon, I (a naive soul) had ambitiously set

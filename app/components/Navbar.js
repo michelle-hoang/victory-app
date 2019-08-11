@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Navbar extends React.Component {
   render() {
     return (
-      <div className="sidebar">
+      <div className="directory">
         <nav>
           <Link to="/" className="navbar">
             <div>Home</div>

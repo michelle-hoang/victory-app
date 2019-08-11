@@ -11,7 +11,9 @@ export default class Root extends React.Component {
     return (
       <Router>
         <div>
-          <Navbar />
+          <div className="directoryContainer">
+            <Navbar />
+          </div>
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/about" component={About} />

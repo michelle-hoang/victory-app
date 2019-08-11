@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
 
-const Crime = db.define('crime', {
+const Data = db.define('data', {
   name: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -17,4 +17,4 @@ const Crime = db.define('crime', {
   },
 });
 
-module.exports = Crime;
+module.exports = Data;

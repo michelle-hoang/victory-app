@@ -11,8 +11,6 @@ let middleware = [
   thunkMiddleware.withExtraArgument({ axios }),
 ];
 if (process.browser) {
-  // We'd like the redux logger to only log messages when it's running in the
-  // browser, and not when we run the tests from within Mocha.
   middleware = [...middleware, createLogger({ collapsed: true })];
 }
 const RESET_STORE = 'RESET_STORE';

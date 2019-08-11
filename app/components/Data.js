@@ -1,9 +1,13 @@
 import React from 'react';
 import Bar from './Bar';
-import Scatter from './Scatter';
+import Area from './Area';
 import Line from './Line';
-import Polar from './Polar';
-import StackedBar from './StackedBar';
+import GroupedBar from './GroupedBar';
+import Texts from './Texts';
+import Radar from './Radar';
+import Morale from './Morale';
+import ExpLoader from './ExpLoader';
+import ActualLoader from './ActualLoader';
 
 export const Data = () => {
   return (
@@ -11,17 +15,22 @@ export const Data = () => {
       <div className="header">
         <h1>Data Visualizations</h1>
       </div>
-      <div className="chartContainer">
-        <div>Bar Chart</div>
+      <div className="chartContainer" style={{ width: '35rem' }}>
         <Bar />
-        <div>Stacked Bar</div>
-        <StackedBar />
-        <div>Scatter Plot</div>
-        <Scatter />
-        <div>Line Graph</div>
+        <GroupedBar />
+        <Morale />
+        <Texts />
         <Line />
-        <div>Polar Axis</div>
-        <Polar />
+        {/* <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div style={{ width: '50%' }}>
+            <ExpLoader />
+          </div>
+          <div style={{ width: '50%' }}>
+            <ActualLoader />
+          </div>
+        </div> */}
+        <Radar />
+        <Area />
       </div>
     </div>
   );

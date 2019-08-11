@@ -1,13 +1,13 @@
 import React from 'react';
 import { VictoryChart, VictoryLine, VictoryLabel } from 'victory';
 
-export default class Line extends React.Component {
+export default class Texts extends React.Component {
   render() {
     return (
       <div style={{ marginBottom: '2rem' }}>
         <VictoryChart>
           <VictoryLabel
-            text="Expected vs. Actual Progress"
+            text="Incoming vs. Outgoing Text Messages"
             x={225}
             y={30}
             textAnchor="middle"
