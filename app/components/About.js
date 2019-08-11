@@ -6,25 +6,17 @@ export const About = () => {
       <div className="header">
         <h1>Background Information</h1>
       </div>
-      <div>
-        <p>
-          All data used in this project is publically accessible through the
-          City of Chicago Data Portal.
-        </p>
-        <p>
-          The main dataset contains all reported crimes in the city of Chicago,
-          from the years 2001 through 2019, excluding the most recent 7 days
-          from time of access.
-        </p>
-        <p>
-          Looking at crimes recorded in 2018, I focused four subsets of crime:
-          <ul>
-            <li>Homicide</li>
-            <li>Narcotics</li>
-            <li>Weapons Violations</li>
-            <li>Interference with a Public Office</li>
-          </ul>
-        </p>
+      <div className="info">
+        <div style={{ width: '36rem' }}>
+          <div>
+            <p>
+              At the start of Stackathon, I (a naive soul) had ambitiously set
+              out to make a heat map of crime in Chicago using d3.js, also known
+              as "Data-Driven Documents" or Satan's Javascript Library if he had
+              to make one.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

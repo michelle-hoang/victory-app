@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
             <div>About</div>
           </Link>
           <Link to="/data" className="navbar">
-            <div>Visualizing Crime</div>
+            <div>Visualizing Stackathon</div>
           </Link>
         </nav>
       </div>

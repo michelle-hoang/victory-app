@@ -1,4 +1,9 @@
 import React from 'react';
+import Bar from './Bar';
+import Scatter from './Scatter';
+import Line from './Line';
+import Polar from './Polar';
+import StackedBar from './StackedBar';
 
 export const Data = () => {
   return (
@@ -8,10 +13,15 @@ export const Data = () => {
       </div>
       <div className="chartContainer">
         <div>Bar Chart</div>
-        <div>Donut Chart</div>
+        <Bar />
+        <div>Stacked Bar</div>
+        <StackedBar />
+        <div>Scatter Plot</div>
+        <Scatter />
         <div>Line Graph</div>
-        <div>Forced Bubble</div>
-        <div>Heat Map</div>
+        <Line />
+        <div>Polar Axis</div>
+        <Polar />
       </div>
     </div>
   );

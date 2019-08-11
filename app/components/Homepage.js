@@ -6,18 +6,11 @@ export const Homepage = () => {
       <div className="header">
         <h1>The Goal</h1>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-        }}
-      >
-        <div style={{ width: '50%' }}>
+      <div className="goal">
+        <div style={{ width: '55%' }}>
           <p>
-            To implement d3.js as a method for communicating quantitative
-            information about crimes committed in Chicago, IL, over the course
-            of 2018.
+            To implement Victory.js as a tool for creating data visualizations,
+            as a result of having failed to learn D3.js.
           </p>
         </div>
       </div>
