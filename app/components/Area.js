@@ -12,25 +12,6 @@ import {
 
 export default class Area extends React.Component {
   render() {
-    const eventHandler = {
-      onMouseOver: () => {
-        return [
-          {
-            target: 'labels',
-            mutation: () => ({ active: true }),
-          },
-        ];
-      },
-      onMouseOut: () => {
-        return [
-          {
-            target: 'labels',
-            mutation: () => ({ active: false }),
-          },
-        ];
-      },
-    };
-
     return (
       <div>
         <VictoryChart height={500} scale={{ x: 'time' }}>
