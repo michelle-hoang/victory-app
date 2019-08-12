@@ -32,7 +32,13 @@ export default class ExpLoader extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ marginBottom: '2rem' }}>
+        <VictoryLabel
+          text="Actual Progress"
+          x={225}
+          y={30}
+          textAnchor="middle"
+        />
         <svg viewBox="0 0 400 400" width="100%" height="100%">
           <VictoryPie
             standalone={false}

@@ -8,7 +8,7 @@ import {
   VictoryTooltip,
 } from 'victory';
 
-export default class Bar extends React.Component {
+export default class StackedBar extends React.Component {
   render() {
     const eventHandler = {
       onMouseOver: () => {
@@ -33,7 +33,7 @@ export default class Bar extends React.Component {
       <div style={{ marginBottom: '2rem' }}>
         <VictoryChart domainPadding={{ x: 50 }}>
           <VictoryLabel
-            text="Activities per day of Stackathon"
+            text="Division of Time during Stackathon"
             x={225}
             y={30}
             textAnchor="middle"
@@ -46,6 +46,7 @@ export default class Bar extends React.Component {
               '#82B756',
               '#4889EA',
               '#3667AF',
+              '#ED7DD1',
             ]}
           >
             <VictoryBar
@@ -147,7 +148,7 @@ export default class Bar extends React.Component {
                 { x: 'Day 1', y: 1, label: 'Writing failed code' },
                 { x: 'Day 2', y: 2, label: 'Writing failed code' },
                 { x: 'Day 3', y: 2, label: 'Writing failed code' },
-                { x: 'Day 4', y: 8, label: 'Writing actual code' },
+                { x: 'Day 4', y: 1, label: 'Writing failed code' },
               ]}
               events={[
                 {
@@ -187,17 +188,47 @@ export default class Bar extends React.Component {
                 },
               ]}
             />
+            <VictoryBar
+              labelComponent={<VictoryTooltip />}
+              data={[
+                {
+                  x: 'Day 1',
+                  y: 0,
+                  label: 'Writing working code',
+                },
+                {
+                  x: 'Day 2',
+                  y: 0,
+                  label: 'Writing working code',
+                },
+                {
+                  x: 'Day 3',
+                  y: 0,
+                  label: 'Writing working code',
+                },
+                {
+                  x: 'Day 4',
+                  y: 8,
+                  label: 'Writing working code',
+                },
+              ]}
+              events={[
+                {
+                  target: 'data',
+                  eventHandlers: eventHandler,
+                },
+              ]}
+            />
           </VictoryStack>
           <VictoryAxis
             dependentAxis
-            label="Time in hours"
+            label="Time in Hours"
             minDomain={{ y: 0 }}
             style={{
               axisLabel: { padding: 30 },
             }}
           />
           <VictoryAxis
-            label="Stackathon"
             style={{
               axisLabel: { padding: 30 },
             }}

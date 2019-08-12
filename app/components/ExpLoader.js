@@ -14,16 +14,12 @@ export default class ExpLoader extends React.Component {
     let percent = 25;
     this.setStateInterval = window.setInterval(() => {
       percent += Math.random() * 25;
-      percent = percent > 100 ? 0 : percent;
+      percent = percent > 100 ? 100 : percent;
       this.setState({
         percent,
         data: this.getData(percent),
       });
     }, 2000);
-  }
-
-  componentWillUnmount() {
-    window.clearInterval(this.setStateInterval);
   }
 
   getData(percent) {
@@ -33,6 +29,12 @@ export default class ExpLoader extends React.Component {
   render() {
     return (
       <div>
+        <VictoryLabel
+          text="Expected Progress"
+          x={225}
+          y={30}
+          textAnchor="middle"
+        />
         <svg viewBox="0 0 400 400" width="100%" height="100%">
           <VictoryPie
             standalone={false}

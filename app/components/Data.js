@@ -1,9 +1,9 @@
 import React from 'react';
-import Bar from './Bar';
+import StackedBar from './StackedBar';
 import Area from './Area';
 import GroupedBar from './GroupedBar';
 import Radar from './Radar';
-import Morale from './Morale';
+import Line from './Line';
 import ExpLoader from './ExpLoader';
 import ActualLoader from './ActualLoader';
 
@@ -14,9 +14,9 @@ export const Data = () => {
         <h1>Data Visualizations</h1>
       </div>
       <div className="chartContainer" style={{ width: '35rem' }}>
-        <Bar />
+        <StackedBar />
         <GroupedBar />
-        <Morale />
+        <Line />
         <Radar />
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           <div style={{ width: '50%' }}>

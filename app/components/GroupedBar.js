@@ -43,17 +43,21 @@ export default class GroupedBar extends React.Component {
               labelComponent={<VictoryTooltip />}
               data={[
                 {
-                  x: 'task 1',
-                  y: 40,
+                  x: 'Goal 1',
+                  y: 30,
                   label: 'Making progress on my stackathon',
                 },
                 {
-                  x: 'task 2',
-                  y: 40,
+                  x: 'Goal 2',
+                  y: 30,
                   label: 'Developing confidence as a programmer',
                 },
-                { x: 'task 3', y: 50, label: 'Mastering D3' },
-                { x: 'task 4', y: 20, label: 'Consuming caffeine' },
+                { x: 'Goal 3', y: 20, label: 'Mastering D3' },
+                {
+                  x: 'Goal 4',
+                  y: 20,
+                  label: 'Generating meaningful work for my portfolio',
+                },
               ]}
               events={[
                 {
@@ -66,17 +70,21 @@ export default class GroupedBar extends React.Component {
               labelComponent={<VictoryTooltip />}
               data={[
                 {
-                  x: 'task 1',
-                  y: 20,
+                  x: 'Goal 1',
+                  y: 12,
                   label: 'Making progress on my stackathon',
                 },
                 {
-                  x: 'task 2',
-                  y: -10,
+                  x: 'Goal 2',
+                  y: -3,
                   label: 'Developing confidence as a programmer',
                 },
-                { x: 'task 3', y: 10, label: 'Mastering D3' },
-                { x: 'task 4', y: 40, label: 'Consuming caffeine' },
+                { x: 'Goal 3', y: -5, label: 'Mastering D3' },
+                {
+                  x: 'Goal 4',
+                  y: 5,
+                  label: 'Generating meaningful work for my portfolio',
+                },
               ]}
               events={[
                 {
@@ -88,9 +96,8 @@ export default class GroupedBar extends React.Component {
           </VictoryGroup>
           <VictoryAxis
             dependentAxis
-            label="Percent towards Goal"
+            label="% towards Stackathon Goal"
             minDomain={{ y: 0 }}
-            maxDomain={{ y: 100 }}
             style={{
               axisLabel: { padding: 30 },
             }}

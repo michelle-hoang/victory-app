@@ -10,10 +10,12 @@ export const About = () => {
         <div style={{ width: '35rem' }}>
           <div>
             <p>
-              At the start of Stackathon, I (a naive soul) had ambitiously set
-              out to make a heat map of crime in Chicago using d3.js, also known
-              as "Data-Driven Documents" or Satan's Javascript Library if he had
-              to make one.
+              At the start of Stackathon, I (a naive and bright-eyed soul)
+              ambitiously set out to make a heat map of crime in Chicago using
+              d3.js. <br />
+              <br /> d3.js is also known as "Data-Driven Documents" or the
+              Javascript Library that Satan would make, if he was a data
+              scientist.
             </p>
           </div>
         </div>

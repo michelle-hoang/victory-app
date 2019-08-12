@@ -9,7 +9,7 @@ export const Homepage = () => {
       <div className="goal">
         <div style={{ width: '35rem' }}>
           <p>
-            To implement Victory.js as a tool for creating data visualizations,
+            To implement Victory.js as a tool for creating data visualizations
             as a result of having failed to learn D3.js.
           </p>
         </div>

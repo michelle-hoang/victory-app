@@ -10,18 +10,18 @@ import {
 
 const characterData = [
   {
-    'physical strength': +50,
-    'mental fortitude': +100,
-    fatigue: 20,
-    'emotional sensitivity': +40,
-    charisma: 50,
+    'Physical Strength': +50,
+    'Mental Fortitude': +100,
+    Fatigue: 20,
+    'Emotional Sensitivity': +40,
+    Charisma: 50,
   },
   {
-    'physical strength': +10,
-    'mental fortitude': +70,
-    fatigue: 100,
-    'emotional sensitivity': +60,
-    charisma: 10,
+    'Physical Strength': +10,
+    'Mental Fortitude': +70,
+    Fatigue: 100,
+    'Emotional Sensitivity': +60,
+    Charisma: 10,
   },
 ];
 
@@ -65,7 +65,7 @@ export default class Radar extends React.Component {
           domain={{ y: [0, 1] }}
         >
           <VictoryLabel
-            text="Me before and after Stackathon"
+            text="My Profile Before and After Stackathon"
             x={200}
             y={5}
             textAnchor="middle"

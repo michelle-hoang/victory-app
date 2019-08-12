@@ -1,7 +1,7 @@
 import React from 'react';
 import { VictoryChart, VictoryLine, VictoryLabel, VictoryAxis } from 'victory';
 
-export default class Morale extends React.Component {
+export default class Line extends React.Component {
   render() {
     return (
       <div style={{ marginBottom: '2rem' }}>
@@ -20,26 +20,26 @@ export default class Morale extends React.Component {
             }}
             interpolation="natural"
             data={[
-              { x: 1, y: 5, label: 'day 1' },
+              { x: 1, y: 5, label: 'Day 1' },
               { x: 2, y: 6 },
               { x: 3, y: 8 },
               { x: 4, y: 6 },
               { x: 5, y: 7 },
               { x: 6, y: 5 },
               { x: 7, y: 3 },
-              { x: 8, y: 4, label: 'day 2' },
+              { x: 8, y: 4, label: 'Day 2' },
               { x: 9, y: 3 },
               { x: 10, y: 2 },
               { x: 11, y: 1 },
               { x: 12, y: 0.5 },
-              { x: 13, y: 0.5, label: 'day 3' },
+              { x: 13, y: 0.5, label: 'Day 3' },
               { x: 14, y: 1 },
-              { x: 15, y: 2 },
+              { x: 15, y: 1.5 },
               { x: 16, y: 1 },
-              { x: 17, y: 2 },
-              { x: 18, y: 3, label: 'day 4' },
-              { x: 19, y: 3 },
-              { x: 20, y: 4 },
+              { x: 17, y: 2.25 },
+              { x: 18, y: 3, label: 'Day 4' },
+              { x: 19, y: 2 },
+              { x: 20, y: 3 },
             ]}
           />
           <VictoryAxis
