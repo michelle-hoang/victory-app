@@ -18,7 +18,7 @@ const characterData = [
   },
   {
     'Physical Strength': +10,
-    'Mental Fortitude': +70,
+    'Mental Fortitude': +50,
     Fatigue: 100,
     'Emotional Sensitivity': +60,
     Charisma: 10,
