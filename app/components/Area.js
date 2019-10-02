@@ -88,7 +88,10 @@ export default class Area extends React.Component {
               name: { fontSize: 7 },
             }}
             data={[
-              { name: `Dan's level of concern`, symbol: { fill: 'orange' } },
+              {
+                name: `My partner's level of concern`,
+                symbol: { fill: 'orange' },
+              },
               {
                 name: '# of half-empty cups on counters',
                 symbol: { fill: 'gold' },
